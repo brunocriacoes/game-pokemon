@@ -8,26 +8,30 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="pontuacao">
-        <div>
-            <small>pontos</small>
-            <b class="js-pontuacao">0</b>
+    <div class="bg">
+        <div class="pontuacao">
+            <div>
+                <small>pontos</small>
+                <b class="js-pontuacao">0</b>
+            </div>
+            <div>
+                <small>recorde</small>
+                <b class="js-record">0</b>
+            </div>
+        </div> 
+        <img src="./asset/image/pokemon.png" class="logo" alt=".">
+        <div class="raios">
+            <img src="./asset/image/pokemon.svg" class="js-image poke-sombra">
         </div>
         <div>
-            <small>recorde</small>
-            <b class="js-record">0</b>
+            <button class="opcao js-pode-1">Pikacu</button>
+            <button class="opcao js-pode-2">Eguens</button>
+            <button class="opcao js-pode-3">pigioto</button>
         </div>
-    </div> 
-    <img src="./asset/image/pokemon.png" class="logo" alt=".">
-    <div class="raios">
-        <img src="" class="js-image poke-sombra">
-    </div>
-    <div>
-        <button class="opcao js-pode-1">Pikacu</button>
-        <button class="opcao js-pode-2">Eguens</button>
-        <button class="opcao js-pode-3">pigioto</button>
     </div>
     <audio src="./asset/audio/start.mp3" autoplay controls hidden ></audio>
+    <audio class="js-win" src="./asset/audio/win.mp3" hidden ></audio>
+    <audio class="js-lose" src="./asset/audio/lose.mp3" hidden ></audio>
     <script src="./index.js" type="module"></script>
 </body>
 </html>

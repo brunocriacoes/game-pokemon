@@ -9,6 +9,10 @@ body {
     background-color: #C00;
     margin: 0;
     padding: 0;
+    background-image: url('./asset/image/bg.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .poke-sombra {
     display: block;
@@ -20,6 +24,9 @@ body {
 }
 .revela {
     filter: none !important;
+    width: 230px;
+    height: 230px;
+    transition: all .3s ease-in-out;
 }
 .logo {
     display: block;
@@ -85,4 +92,9 @@ body {
     color: sandybrown;
     font-size: 24px;
     text-align: center;
+}
+.bg {
+    display: block;
+    background-color: #C00E;
+    min-height: 100vh;
 }

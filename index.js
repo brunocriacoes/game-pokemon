@@ -13,6 +13,9 @@ import {Pokemon} from './asset/js/pokemon.js'
     let option_2 = document.querySelector('.js-pode-2')
     let option_3 = document.querySelector('.js-pode-3')
 
+    let $win = document.querySelector('.js-win')
+    let $lose = document.querySelector('.js-lose')
+
     let $pontuacao = document.querySelector('.js-pontuacao') 
     let $record = document.querySelector('.js-record') 
 
@@ -27,6 +30,7 @@ import {Pokemon} from './asset/js/pokemon.js'
         let escolha = this.innerHTML
         if( escolha == poke.name ) {
             $image.classList.add( 'revela' )
+            $win.play()
             localStorage.setItem( 'pontuacao', +localStorage.getItem('pontuacao') + 1  )
             if( localStorage.getItem('pontuacao') > localStorage.getItem('record') || 0 ) {
                 localStorage.setItem( 'record', localStorage.getItem('pontuacao') )
@@ -34,6 +38,8 @@ import {Pokemon} from './asset/js/pokemon.js'
         }else {
             localStorage.setItem( 'pontuacao', 0  )
             $image.classList.remove( 'revela' )
+            $lose.play()
+            $image.src = "./asset/image/pokemon.svg"
         }
         setTimeout( () => {
             document.location.reload(true)
